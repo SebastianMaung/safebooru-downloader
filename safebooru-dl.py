@@ -54,7 +54,7 @@ while (True):
     if (pr ==True):
         response_API = requests.get('https://safebooru.org/index.php?page=dapi&s=post&q=index&limit=1&id='+str(ida)+'&json=1', proxies=proxies,  verify=True)
     else:
-        response_API = requests.get('https://safebooru.org/index.php?page=dapi&s=post&q=index&pid=0&limit=9999&json=1&tags=la_pluma_(arknights)', headers=headers)
+        response_API = requests.get('https://safebooru.org/index.php?page=dapi&s=post&q=index&pid=0&limit=9999&json=1&tags='+tag, headers=headers)
     status = int(response_API.status_code)    
 
 
