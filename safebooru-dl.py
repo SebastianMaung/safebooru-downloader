@@ -1,10 +1,10 @@
 import requests
 import os
+import random
 import json
 import time
 name = "nameofdir"
 #from fp.fp import FreeProxy
-import requests
 
 tag = 'yuuri_(shoujo_shuumatsu_ryokou)'
 
@@ -103,6 +103,7 @@ while (True):
             myfile.write(str("\n\n"))
         myfile.close()
         #print("url:", url)
+        time.sleep(random.randint(4,10)) #might be best not to alter the value
         os.system("wget "+str(url)+" -O "+os.getcwd()+"/"+name+"/"+img)
     except Exception as e:
         print(e)
